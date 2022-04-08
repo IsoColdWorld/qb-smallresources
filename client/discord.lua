@@ -3,21 +3,21 @@
 CreateThread(function()
     while true do
         -- This is the Application ID (Replace this with you own)
-	SetDiscordAppId()
+	SetDiscordAppId(798220254999740447)
 
         -- Here you will have to put the image name for the "large" icon.
-	SetDiscordRichPresenceAsset('logo_name')
+	SetDiscordRichPresenceAsset('iso')
         
         -- (11-11-2018) New Natives:
 
         -- Here you can add hover text for the "large" icon.
-        SetDiscordRichPresenceAssetText('This is a lage icon with text')
+        SetDiscordRichPresenceAssetText('The Coldest City On FiveM')
        
         -- Here you will have to put the image name for the "small" icon.
-        SetDiscordRichPresenceAssetSmall('logo_name')
+        SetDiscordRichPresenceAssetSmall('iso')
 
         -- Here you can add hover text for the "small" icon.
-        SetDiscordRichPresenceAssetSmallText('This is a lsmall icon with text')
+        SetDiscordRichPresenceAssetSmallText('Developed By Von')
 
         QBCore.Functions.TriggerCallback('smallresources:server:GetCurrentPlayers', function(result)
             SetRichPresence('Players: '..result..'/64')
@@ -30,8 +30,8 @@ CreateThread(function()
             First paramater is the button index (0 or 1), second is the title and 
             last is the url (this has to start with "fivem://connect/" or "https://") 
         ]]--
-        SetDiscordRichPresenceAction(0, "First Button!", "fivem://connect/localhost:30120")
-        SetDiscordRichPresenceAction(1, "Second Button!", "fivem://connect/localhost:30120")
+        SetDiscordRichPresenceAction(0, "Discord!", "https://discord.gg/fCzQkuDYXq")
+        SetDiscordRichPresenceAction(1, "Tap In!", "fivem://connect/cfx.re/join/9lxq9m")
 
         -- It updates every minute just in case.
 	Wait(60000)
