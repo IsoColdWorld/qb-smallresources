@@ -203,3 +203,10 @@ end)
 --         TriggerClientEvent("consumables:client:UseRedSmoke", source)
 --     end
 -- end)
+
+QBCore.Functions.CreateUseableItem("lean", function(source, item)
+    local Player = QBCore.Functions.GetPlayer(source)
+	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:Uselean", source)
+    end
+end)
