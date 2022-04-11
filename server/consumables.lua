@@ -211,44 +211,50 @@ QBCore.Functions.CreateUseableItem("lean", function(source, item)
     end
 end)
 
-QBCore.Functions.CreateUseableItem("gatorade", function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
+QBCore.Functions.CreateUseableItem("bolchips", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
 	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:Usegatorade", source)
+        TriggerClientEvent("consumables:client:Eat", src, item.name)
+    end
+end)
+
+QBCore.Functions.CreateUseableItem("gatorade", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:Drink", src, item.name)
     end
 end)
 
 QBCore.Functions.CreateUseableItem("gatoradeb", function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
 	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:Usegatoradeb", source)
-    end
-end)
-
-QBCore.Functions.CreateUseableItem("doritosnacho", function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:Usedoritosnacho", source)
+        TriggerClientEvent("consumables:client:Drink", src, item.name)
     end
 end)
 
 QBCore.Functions.CreateUseableItem("doritosranch", function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
 	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:Usedoritosranch", source)
+        TriggerClientEvent("consumables:client:Eat", src, item.name)
     end
 end)
 
-QBCore.Functions.CreateUseableItem("bolchips", function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
+QBCore.Functions.CreateUseableItem("doritosnacho", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
 	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:Usebolchips", source)
+        TriggerClientEvent("consumables:client:Eat", src, item.name)
     end
 end)
 
 QBCore.Functions.CreateUseableItem("caprisun", function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
 	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:Usecaprisun", source)
+        TriggerClientEvent("consumables:client:Drink", src, item.name)
     end
 end)
