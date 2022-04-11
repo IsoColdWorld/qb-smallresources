@@ -245,3 +245,10 @@ QBCore.Functions.CreateUseableItem("bolchips", function(source, item)
         TriggerClientEvent("consumables:client:Usebolchips", source)
     end
 end)
+
+QBCore.Functions.CreateUseableItem("caprisun", function(source, item)
+    local Player = QBCore.Functions.GetPlayer(source)
+	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:Usecaprisun", source)
+    end
+end)
