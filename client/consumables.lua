@@ -515,3 +515,25 @@ CreateThread(function()
         end
     end
 end)
+
+
+RegisterNetEvent("consumables:client:Uselean")
+AddEventHandler("consumables:client:Uselean", function()
+    QBCore.Functions.Progressbar("sip_wock", "Sipping Wock..", 1500, false, true, {
+        disableMovement = false,
+        disableCarMovement = false,
+		disableMouse = false,
+		disableCombat = true,
+    }, {}, {}, {}, function() -- Done
+        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["lean"], "remove")
+        if IsPedInAnyVehicle(PlayerPedId(), false) then
+            TriggerEvent('animations:client:EmoteCommandStart', {"coffee"})
+        else
+            TriggerEvent('animations:client:EmoteCommandStart', {"coffee"})
+        end
+        TriggerEvent("evidence:client:SetStatus", "loweyes", 300)
+        CokeBaggyEffect()
+        TriggerEvent('animations:client:coffee')
+		TriggerServerEvent('hud:Server:RelieveStress', math.random(14, 18))
+    end)
+end)
