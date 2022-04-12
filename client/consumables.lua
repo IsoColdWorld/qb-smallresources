@@ -517,23 +517,18 @@ CreateThread(function()
 end)
 
 
-RegisterNetEvent("consumables:client:Uselean")
-AddEventHandler("consumables:client:Uselean", function()
-    QBCore.Functions.Progressbar("sip_wock", "Sipping Wock..", 1500, false, true, {
+RegisterNetEvent('consumables:client:Uselean', function(itemName)
+    TriggerEvent('animations:client:EmoteCommandStart', {"coffee"})
+    QBCore.Functions.Progressbar("drink_something", "Sipping Wock..", 5000, false, true, {
         disableMovement = false,
         disableCarMovement = false,
 		disableMouse = false,
 		disableCombat = true,
     }, {}, {}, {}, function() -- Done
-        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["lean"], "remove")
-        if IsPedInAnyVehicle(PlayerPedId(), false) then
-            TriggerEvent('animations:client:EmoteCommandStart', {"coffee"})
-        else
-            TriggerEvent('animations:client:EmoteCommandStart', {"coffee"})
-        end
+        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[lean], "remove")
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
         TriggerEvent("evidence:client:SetStatus", "loweyes", 300)
         CokeBaggyEffect()
-        TriggerEvent('animations:client:coffee')
-		TriggerServerEvent('hud:Server:RelieveStress', math.random(14, 18))
+        TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + ConsumeablesDrink[itemName])
     end)
 end)
