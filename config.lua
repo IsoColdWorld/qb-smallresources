@@ -19,6 +19,12 @@ ConsumeablesEat = {
     ["doritosranch"] = math.random(40, 50),
     ["doritosnacho"] = math.random(40, 50),
     ["bolchips"] = math.random(40, 50),
+    ["burger-bleeder"] = math.random(40, 50),
+    ["burger-moneyshot"] = math.random(40, 50),
+    ["burger-torpedo"] = math.random(40, 50),
+    ["burger-heartstopper"] = math.random(40, 50),
+    ["burger-meatfree"] = math.random(40, 50),
+    ["burger-fries"] = math.random(40, 50),
 
 }
 
@@ -29,6 +35,8 @@ ConsumeablesDrink = {
     ["caprisun"] = math.random(40, 50),
     ["gatorade"] = math.random(40, 50),
     ["gatoradeb"] = math.random(40, 50),
+    ["burger-softdrink"] = math.random(40, 50),
+    ["buger-mshake"] = math.random(40, 50),
 }
 
 ConsumeablesAlcohol = {
