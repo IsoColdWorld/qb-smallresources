@@ -60,7 +60,7 @@ if Config.IdleCamera then --Disable Idle Cinamatic Cam
   	DisableIdleCamera(true)
 end
 
-CreateThread(function()
+--[[CreateThread(function()
     while true do
         local ped = PlayerPedId()
         local weapon = GetSelectedPedWeapon(ped)
@@ -82,7 +82,7 @@ CreateThread(function()
 		end
         Wait(7)
     end
-end)
+end)]]
 
 CreateThread(function()
     local pedPool = GetGamePool('CPed')
