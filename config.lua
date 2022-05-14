@@ -75,6 +75,8 @@ ConsumeablesDrink = {
     ["tcomtndew"] = math.random(20, 40),
     ["wingstopdrink"] = math.random(40, 50),
     ["mshake"] = math.random(40, 50),
+    ["slushy"] = math.random(40, 50),
+    ["hawaiianpunch"] = math.random(40, 50),
 }
 
 ConsumeablesAlcohol = {
