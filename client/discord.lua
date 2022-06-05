@@ -6,7 +6,7 @@ CreateThread(function()
 	SetDiscordAppId(798220254999740447)
 
         -- Here you will have to put the image name for the "large" icon.
-	SetDiscordRichPresenceAsset('iso')
+	SetDiscordRichPresenceAsset('rich')
         
         -- (11-11-2018) New Natives:
 
@@ -14,7 +14,7 @@ CreateThread(function()
         SetDiscordRichPresenceAssetText('The Coldest City On FiveM')
        
         -- Here you will have to put the image name for the "small" icon.
-        SetDiscordRichPresenceAssetSmall('iso')
+        SetDiscordRichPresenceAssetSmall('rich')
 
         -- Here you can add hover text for the "small" icon.
         SetDiscordRichPresenceAssetSmallText('Developed By Von')
