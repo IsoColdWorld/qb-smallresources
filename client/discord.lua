@@ -12,12 +12,6 @@ CreateThread(function()
 
         -- Here you can add hover text for the "large" icon.
         SetDiscordRichPresenceAssetText('The Coldest City On FiveM')
-       
-        -- Here you will have to put the image name for the "small" icon.
-        SetDiscordRichPresenceAssetSmall('iso')
-
-        -- Here you can add hover text for the "small" icon.
-        SetDiscordRichPresenceAssetSmallText('Developed By Von')
 
         QBCore.Functions.TriggerCallback('smallresources:server:GetCurrentPlayers', function(result)
             SetRichPresence('Players: '..result..'/64')
