@@ -14,7 +14,7 @@ CreateThread(function()
         SetDiscordRichPresenceAssetText('The Coldest City On FiveM')
        
         -- Here you will have to put the image name for the "small" icon.
-        SetDiscordRichPresenceAssetSmall('rich')
+        SetDiscordRichPresenceAssetSmall('iso')
 
         -- Here you can add hover text for the "small" icon.
         SetDiscordRichPresenceAssetSmallText('Developed By Von')
